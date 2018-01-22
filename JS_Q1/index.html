@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>事件驅動 - (2) 實作：電燈開關</title>
+    <!-- CSS 風格並不包含在教學裡 -->
+    <style>
+      .button {
+        margin-left: 10px;
+        display: inline-block;
+        padding: 45px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #1E90FF;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+
+      .button:hover {background-color: #3e8e41}
+
+      .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+
+      .div {
+        margin-left: 10px;
+        padding: 25px 32px;
+        font-size: 24px;
+        text-align: center;
+        color: #fff;
+        background-color: #FF0088;
+        border-style: solid;
+        border-color:   #FF88C2;
+        border-width: 7px;
+        border-radius: 15px;
+      }
+      </style>
+    <!--- 從外部載入 js 檔 -->
+    <script type="text/javascript" src="js/index.js"></script>
+  </head>
+  <body>
+    <table style="margin:0px auto;padding: 10px;border:2px solid;border-color:#1E90FF; border-radius: 15px;">
+      <tbody>
+      <tr>
+      <td rowspan="2">
+        <!--- 照片 -->
+        <img id="image" src="img/on.jpg" width="400" height="300">
+      </td>
+      <td>
+        <!--- 倒數計時器 -->
+        <div class="div" id="timer">5</div>
+      </td>
+      </tr>
+      <tr>
+      <td>
+        <!--- 開關燈按鈕 -->
+        <button class="button" onclick="toggleLight();">ON<br>-<br>OFF</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

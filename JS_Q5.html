@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>事件驅動 - (5) </title>
+    <style>
+      .style1 {
+        color: green;
+      }
+      .style2 {
+        color: red;
+      }
+    </style>
+    <script>
+    "use strict";
+
+
+
+
+    function validate() {
+      var todo = document.createElement("div");
+      var span = document.createElement("span");
+     /* var urgent = document.getElementByName("urgent").checked;   */
+      
+      var input = document. getElementById("nric").value;
+      
+      
+        if(document.getElementById("test").urgent[0].checked){
+          todo.classList.add("style2");
+          /* document.getElementById("test").style.clear = "style1"  ; */
+         }
+        else if(document.getElementById("test").urgent[1].checked){
+          todo.classList.add("style1");
+          //document.getElementById("test").style.clear = "style2" ;//
+        }
+        else
+        {
+          alert("chose one!!"); // tmd選一個
+          return;
+        }
+      
+      
+      if(input.value == ""){
+       
+        input = "廢文一篇";
+      }
+      
+      /*
+      if(urgent){
+        todo.classList.add("urgent");}
+      else {
+        todo.classList.add("unurgent");}
+     
+      */
+      
+      span.innerHTML = input;
+      todo.appendChild(span);
+
+      document.getElementById("result").appendChild(todo);
+      document.getElementById("nric").value = "" ;
+
+      
+    
+    }
+
+    </script>
+  </head>
+  <body>    
+    <form id='test'>
+      <input type="text" id ="nric">
+      <input type="button" value="輸入" onclick= "validate()"><br>
+      緊急:<input type="radio" id='fuck' name="urgent" value="1"/>
+      不緊急:<input type="radio" id='fuck' name="urgent" value="2" />
+      <p id="result">
+        
+      </p>
+    </form>
+    
+  </body>
+</html>

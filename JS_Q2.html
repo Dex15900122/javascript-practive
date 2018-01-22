@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>事件驅動 - (3) 實作：表單驗證</title>
+    <script>
+    "use strict";
+    function validate() {
+      var code = document.getElementById("nric").value;
+      if (code == ""){
+        alert ("內容是空的");
+        return;
+      }
+      else if (!isNaN(code)){
+        alert ("內容不能都是數字");
+        return;
+      }
+      else if( code.length != 10 ) {
+        alert ("長度必須等於10");
+        return;
+        }
+      else {
+        if (code[1]==1){
+          document.getElementById("result").innerHTML = "男";
+          return;
+        }
+        else if (code[1]==2){
+          document.getElementById("result").innerHTML = "女";
+          return;
+        }
+        document.getElementById("result").innerHTML = "通過驗證";
+      }
+      
+    }
+    
+
+    </script>
+  </head>
+  <body>    
+    <form >
+      <input type="text" id ="nric">
+      <input type="button" value="驗證" onclick= "validate()">
+      <p id="result">
+        
+      </p>
+    </form>
+    
+  </body>
+</html>
