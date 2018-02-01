@@ -121,6 +121,13 @@
   bottom: 0px;
 }
 
+
+#hero-image-block    .character-block .heal-image {
+  position: absolute;
+  left: 60px;
+  bottom: 0px;
+}
+
 /* 設定transition class */
 /* 給 .hurt-text.attacked 使用*/
 #hero-image-block    .character-block .hurt-text,
@@ -140,11 +147,27 @@
   bottom: 150px;
 }
 
-#hero-image-block .skill-block {
+#hero-image-block    .character-block .heal-text {
+  position: absolute;
+  font-size: 60px;
+  color: green;
+  width: 100%;
+  left: 0px;
+  bottom: 50px;
+  font-family: "Contrail One";
+  transition: bottom 500ms;
+}
+
+#hero-image-block    .character-block .heal-text.healed {
+  bottom: 150px;
+}
+
+#hero-image-block .skill-block{
   position: relative;
 }
 
-#hero-image-block .skill-image {
+#hero-image-block .skill-image,
+#hero-image-block .heal-image {
   width: 20%;
 }
 
