@@ -243,7 +243,7 @@ window.addEventListener("keydown",keyEvent);
 
 addSkillEvent();
 
-
+addHealEvent();
 
 
 var rounds = 10;
