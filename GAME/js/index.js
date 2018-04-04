@@ -96,7 +96,7 @@ class Hero extends BaseCharacter {
     console.log("召喚英雄 " + this.name + "！");
   }
   attack(character) {
-    var damage = Math.random() * (this.ap / 2) + (this.ap / 2);
+    var damage = Math.random() * (this.ap * 2) + (this.ap * 2);
     super.attack(character, Math.floor(damage));
   }
   getHurt(damage) {
@@ -250,7 +250,7 @@ addSkillEvent();
 
 var rounds = 10;
 var turn = true;
-var hero = new Hero("Dex", 130, 30);
+var hero = new Hero("Dex", 130, 90,);
 var monster = new Monster("Skeleton", 130, 10);
 
 
